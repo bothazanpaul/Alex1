@@ -1,6 +1,7 @@
 import random
 word_list = ["palarie", "deget", "picior", "abecedar"]
 
+
 def get_word(word_list):
     word = random.choice(word_list)
     return word.upper()
@@ -56,10 +57,8 @@ def play(word):
         print("Imi pare rau, ai ramas fara incercari. Cuvantul era " + word + ". Poate data viitoare!")
 
 
-
-
 def display_hangman(tries):
-    stages = [  """
+    stages = ["""
                    --------
                    |      |
                    |      O
@@ -125,12 +124,14 @@ def display_hangman(tries):
     ]
     return stages[tries]
 
+
 def main():
     word = get_word(word_list)
     play(word)
     while input("Incerci din nou? (Y/N) ").upper() == "Y":
         word = get_word(word_list)
         play(word)
+
 
 if __name__ == "__main__":
     main()

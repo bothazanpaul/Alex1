@@ -8,12 +8,12 @@ import re
 
 fromAddress = 'numeresilitere@numeresilitere.com'
 
-regex = '^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})$'
+rex = '^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})$'
 
 inputAddress = input('Introduceti o adresa de email pentru a fi verificata:')
 addressToVerify = str(inputAddress)
 
-match = re.match(regex, addressToVerify)
+match = re.match(rex, addressToVerify)
 if match == None:
 	print('Adresa de email nevalida!')
 	raise ValueError('Incearca din nou!')
